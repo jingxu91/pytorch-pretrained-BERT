@@ -189,8 +189,8 @@ class ColaProcessor(DataProcessor):
         examples = []
         for (i, line) in enumerate(lines):
             guid = "%s-%s" % (set_type, i)
-            text_a = line[3]
-            label = line[1]
+            text_a = line[1]
+            label = line[2]
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
         return examples
