@@ -182,7 +182,7 @@ class ColaProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return ["0", "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17"]
+        return ["0","1","2"]
 
     def _create_examples(self, lines, set_type):
         """Creates examples for the training and dev sets."""
@@ -436,7 +436,7 @@ def main():
     }
 
     num_labels_task = {
-        "cola": 18,
+        "cola": 3,
         "sst-2": 2,
         "mnli": 3,
         "mrpc": 2,
