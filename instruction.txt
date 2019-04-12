@@ -1,0 +1,31 @@
+Call "inference.py" in Python IDE by following lines:
+
+export DATA_DIR=/Users/jing/Documents/pytorch-pretrained-BERT
+python inference.py 
+--model_dir  /Users/jing/Documents/pytorch-pretrained-BERT/attitude 
+--task_name cola   
+--do_eval  
+--do_lower_case  
+--data_dir $DATA_DIR/   
+--bert_model bert-base-chinese   
+--max_seq_length 128    
+--train_batch_size 32  
+--learning_rate 2e-5 
+--num_train_epochs 3.0 
+--output_dir /Users/jing/Documents/pytorch-pretrained-BERT/eval
+
+Instruction:
+"model_dir" is the model already trained, input the directory where the model saved
+"data_dir" is the test data directory, the test data should be saved as 'dev.tsv'
+"output_dir" is the output directory
+
+
+data example:
+9488	怎么感觉你在骗人呢	0
+10776	第五阶段只是想象吧？	7
+9256	最近在看《银河帝国》。	0
+13795	稍微饱经风霜的老人都比你知道的多	0
+5582	没想到你懂得挺多的。	0
+
+"guid" (tab) "text" (tab) "label"
+guid and label could be set as 0 for test
